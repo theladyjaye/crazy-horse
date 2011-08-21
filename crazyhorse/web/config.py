@@ -52,5 +52,6 @@ class CrazyHorseConfig(object):
 
     def __init__(self):
         #self.parser   = ElementTree.parse(os.getcwd() + "/crazyhorse.config")
-        self.parser   = json.load(os.getcwd() + "/crazyhorse.config")
+        config_json = open(os.getcwd() + "/crazyhorse.config")
+        self.parser = json.load(config_json)
 

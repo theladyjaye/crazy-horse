@@ -1,5 +1,6 @@
 import inspect
 import os
+import crazyhorse
 from crazyhorse.web import routing
 from crazyhorse.web import exceptions
 
@@ -14,9 +15,9 @@ def route(name, path, method="GET", constraints=None):
         file_path = file_path[2:]
         file_path = os.path.splitext(file_path)[0]
     else:
-        #prefix_length = len(os.getcwd()) + 1
-        #had some substring action going on here, but it was breaking: file_path[prefix_length:]
-        file_path     = os.path.splitext(file_path)[0]
+        # not uwsgi initialized
+        prefix_length = len(os.getcwd()) + 1
+        file_path     = os.path.splitext(file_path[prefix_length:])[0]
 
     module_path   = file_path.replace("/", ".")
 
@@ -28,7 +29,9 @@ def route(name, path, method="GET", constraints=None):
                 "action"      : f.__name__,
                 "method"      : method
                 }
-        routing.register_route(**args)
+
+        route = routing.register_route(**args)
+        crazyhorse.get_logger().info("Registered Route {0}: {1} to {2}.{3}".format(method, path, args["controller"], f.__name__))
         return f
     return decorator
 
@@ -47,9 +50,9 @@ def route_method(method, route_name):
         file_path = file_path[2:]
         file_path = os.path.splitext(file_path)[0]
     else:
-        #prefix_length = len(os.getcwd()) + 1
-        #had some substring action going on here, but it was breaking: file_path[prefix_length:]
-        file_path     = os.path.splitext(file_path)[0]
+        # not uwsgi initialized
+        prefix_length = len(os.getcwd()) + 1
+        file_path     = os.path.splitext(file_path[prefix_length:])[0]
 
     module_path   = file_path.replace("/", ".")
 
@@ -65,6 +68,7 @@ def route_method(method, route_name):
             routing.temp_routes[route_name][method] = (module_path + '.' + controller, f.__name__)
         else:
             route.register_action_for_method(method, module_path + '.' + controller, f.__name__)
+            crazyhorse.get_logger().info("Registered Route {0}: {1} to {2}.{3}".format(method, route.path, module_path + '.' + controller, f.__name__))
         return f
 
     return decorator

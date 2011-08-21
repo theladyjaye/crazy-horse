@@ -1,3 +1,9 @@
+class ConfigurationErrorException(Exception):
+
+    def __init__(self, value):
+        self.message = "Invalid crazyhourse.config: {0}".format(value)
+
+
 class DuplicateRouteNameException(Exception):
 
     def __init__(self, route_name):
