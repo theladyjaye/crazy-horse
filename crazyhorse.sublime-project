@@ -1,0 +1,332 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
+			"settings":
+			{
+				"buffer_size": 920,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+			"settings":
+			{
+				"buffer_size": 1031,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/nav.html",
+			"settings":
+			{
+				"buffer_size": 3535,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/resources/css/src/global-search.scss",
+			"settings":
+			{
+				"buffer_size": 1083,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311,
+		"selected_items":
+		[
+			[
+				"xml",
+				"Set Syntax: XML"
+			]
+		],
+		"width": 392
+	},
+	"console":
+	{
+		"height": 0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/wsgi.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/base.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/routes.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/views.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/controller.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo_put.html",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo_post.html",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo.html",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/views.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/controller.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/exceptions.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/errors.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/config.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/actions.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/routing.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/wsgi.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/TestCrazyHorseBase.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/application.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/default.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/untitled",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/ServerErrorsController.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/response.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/httpcontext.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/home.py",
+		"/Users/dev/Projects/APP_Rodeo/www/organism/net/request.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/annotations.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/annotationTest.py",
+		"/Users/dev/Projects/APP_Rodeo/www/organism/lucy/router.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/router.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/sample.ini"
+	],
+	"find":
+	{
+		"height": 33
+	},
+	"find_in_files":
+	{
+		"height": 85,
+		"include_history":
+		[
+			""
+		],
+		"location_history":
+		[
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"selected",
+			"temp_routes",
+			"@post",
+			"inspect",
+			"import re"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	{
+		"mount_points":
+		[
+			"/Users/dev/Projects/APP_CrazyHorse/crazyhorse",
+			"/Users/dev/Projects/APP_CrazyHorse/sample",
+			"/Users/dev/Projects/APP_Rodeo",
+			"/Users/dev/Projects/WWW_DisneyMobile"
+		]
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
+					"settings":
+					{
+						"buffer_size": 920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+					"settings":
+					{
+						"buffer_size": 1031,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/nav.html",
+					"settings":
+					{
+						"buffer_size": 3535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1620,
+								1620
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 7,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/resources/css/src/global-search.scss",
+					"settings":
+					{
+						"buffer_size": 1083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								439,
+								439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0
+	},
+	"input":
+	{
+		"height": 27
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0,
+			1
+		],
+		"rows":
+		[
+			0,
+			1
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0,
+		"selected_items":
+		[
+		],
+		"width": 0
+	},
+	"select_project":
+	{
+		"height": 0,
+		"selected_items":
+		[
+		],
+		"width": 0
+	},
+	"show_minimap": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 273.15234375,
+	"status_bar_visible": true
+}

@@ -1,0 +1,30 @@
+<configuration>
+	<settings>
+		<view>myapp.views.Jinja2View</view>
+		<controllers>myapp.controllers</controllers>
+	</settings>
+	<handlers>
+		<requests>crazyhorse.web</requests>
+		<query_string>crazyhorse.web</query_string>
+		<sessions>crazyhorse.web</sessions>
+	</handlers>
+	<server_errors>
+		<!--
+			method can be * or you can specify a comma seperated list of methods
+			you can also specify individual methods per <error> </error> to have
+			different methods execute different controllers on the same code
+		-->
+		<error code="404" method="*">
+			<controller>myapp.controllers.errors.ServerErrorController</controller>
+			<action>error_404</action>
+		</error>
+		<error code="404" method="get">
+			<controller>myapp.controllers.errors.ServerErrorController</controller>
+			<action>error_404_get</action>
+		</error>
+		<error code="404" method="put,delete">
+			<controller>myapp.controllers.errors.ServerErrorController</controller>
+			<action>error_404_other</action>
+		</error>
+	</server_errors>
+</configuration>
