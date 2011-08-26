@@ -8,10 +8,66 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/__init__.py",
 			"settings":
 			{
-				"buffer_size": 920,
+				"buffer_size": 15,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/manager.py",
+			"settings":
+			{
+				"buffer_size": 967,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/sections.py",
+			"settings":
+			{
+				"buffer_size": 72,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/section.py",
+			"settings":
+			{
+				"buffer_size": 72,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/foo.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/sections.py",
+			"settings":
+			{
+				"buffer_size": 72,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/application.py",
+			"settings":
+			{
+				"buffer_size": 699,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
+			"settings":
+			{
+				"buffer_size": 3214,
 				"line_ending": "Unix"
 			}
 		},
@@ -19,23 +75,23 @@
 			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
 			"settings":
 			{
-				"buffer_size": 1031,
+				"buffer_size": 717,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/nav.html",
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/foo.py",
 			"settings":
 			{
-				"buffer_size": 3535,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/resources/css/src/global-search.scss",
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/crazyhorse.py",
 			"settings":
 			{
-				"buffer_size": 1083,
+				"buffer_size": 137,
 				"line_ending": "Unix"
 			}
 		}
@@ -43,9 +99,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 311,
+		"height": 45,
 		"selected_items":
 		[
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"JSON",
+				"Set Syntax: JSON"
+			],
 			[
 				"xml",
 				"Set Syntax: XML"
@@ -67,28 +131,63 @@
 	},
 	"file_history":
 	[
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/sections.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/wsgi.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/crazyhorse.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/application.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/configuration/test_section.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/configuration/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/section.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/application.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/applications/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/system/wsgi.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/system/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/system/application_init.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/core.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/system.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/applications/wsgi.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/actions.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/routing.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/settings.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/errors.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/core/settings.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/core/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/exceptions.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/wsgi_settings.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/handlers.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/wsgi_initialize.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/utils/logging/colors.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/utils/logging/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/application.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/logging/colors.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/logging/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/utils/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/base.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/config.py",
+		"/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/nav.html",
+		"/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/resources/css/src/global-search.scss",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config.xml",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/routes.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/views.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/controller.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo_put.html",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo_post.html",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo.html",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/views.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/controller.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/exceptions.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/errors.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/config.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/actions.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/routing.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/wsgi.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/TestCrazyHorseBase.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/application.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/default.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/untitled",
@@ -149,30 +248,29 @@
 		[
 			"/Users/dev/Projects/APP_CrazyHorse/crazyhorse",
 			"/Users/dev/Projects/APP_CrazyHorse/sample",
-			"/Users/dev/Projects/APP_Rodeo",
-			"/Users/dev/Projects/WWW_DisneyMobile"
+			"/Users/dev/Projects/APP_Rodeo"
 		]
 	},
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/__init__.py",
 					"settings":
 					{
-						"buffer_size": 920,
+						"buffer_size": 15,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								15,
+								15
 							]
 						],
 						"settings":
@@ -189,24 +287,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/manager.py",
 					"settings":
 					{
-						"buffer_size": 1031,
+						"buffer_size": 967,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								32,
-								32
+								105,
+								105
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -216,27 +313,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/nav.html",
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/sections.py",
 					"settings":
 					{
-						"buffer_size": 3535,
+						"buffer_size": 72,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1620,
-								1620
+								0,
+								72
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
-						"translation.x": 7,
+						"translation.x": 0,
 						"translation.y": 0,
 						"zoom_level": 1
 					},
@@ -244,24 +339,210 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/resources/css/src/global-search.scss",
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/section.py",
 					"settings":
 					{
-						"buffer_size": 1083,
+						"buffer_size": 72,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								439,
-								439
+								72,
+								72
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/foo.py",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/sections.py",
+					"settings":
+					{
+						"buffer_size": 72,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/application.py",
+					"settings":
+					{
+						"buffer_size": 699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								487,
+								487
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
+					"settings":
+					{
+						"buffer_size": 3214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+					"settings":
+					{
+						"buffer_size": 717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								524,
+								524
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/foo.py",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/crazyhorse.py",
+					"settings":
+					{
+						"buffer_size": 137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,

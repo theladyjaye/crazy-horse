@@ -1,10 +1,12 @@
 import crazyhorse
-from crazyhorse.configuration.core import Configuration
+
+from crazyhorse.configuration import Configuration
 from crazyhorse.web.httpcontext import HttpContext
 from crazyhorse.web import exceptions
 from crazyhorse.web import routing
 
 class Application():
+
     def __init__(self, application=None):
         #self.router         = options["router"]() if "router" in options else None
         #self.authorization  = options["authorization"]() if "authorization" in options else None
@@ -17,7 +19,7 @@ class Application():
         # fire it up!
         crazyhorse.get_logger().info("Initializing CrazyHorse")
         Configuration()
-
+        return
         if application is not None:
             application_start = getattr(application, "application_start", None)
 
