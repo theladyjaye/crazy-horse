@@ -17,7 +17,7 @@ class Application(object):
 
         # fire it up!
         crazyhorse.get_logger().info("Initializing CrazyHorse")
-        crazyhorse.get_logger().info("Processing Configuration")
+        crazyhorse.get_logger().debug("Processing Configuration")
         Configuration()
         return
 

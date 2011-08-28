@@ -31,7 +31,7 @@ def route(name, path, method="GET", constraints=None):
                 }
 
         route = routing.register_route(**args)
-        crazyhorse.get_logger().info("Registered Route {0}: {1} to {2}.{3}".format(method, path, args["controller"], f.__name__))
+        crazyhorse.get_logger().debug("Registered Route {0}: {1} to {2}.{3}".format(method, path, args["controller"], f.__name__))
         return f
     return decorator
 
@@ -68,7 +68,7 @@ def route_method(method, route_name):
             routing.temp_routes[route_name][method] = (module_path + '.' + controller, f.__name__)
         else:
             route.register_action_for_method(method, module_path + '.' + controller, f.__name__)
-            crazyhorse.get_logger().info("Registered Route {0}: {1} to {2}.{3}".format(method, route.path, module_path + '.' + controller, f.__name__))
+            crazyhorse.get_logger().debug("Registered Route {0}: {1} to {2}.{3}".format(method, route.path, module_path + '.' + controller, f.__name__))
         return f
 
     return decorator

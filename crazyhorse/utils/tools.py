@@ -15,8 +15,8 @@ def import_class(pkg, cls=None):
 
     try:
         module = importlib.import_module(pkg)
-    except ImportError:
-        crazyhorse.get_logger().warning("Unable to import {0} from {1}".format(cls, pkg))
+    except ImportError as e:
+        crazyhorse.get_logger().warning("Unable to import {0} from {1}: {2}".format(cls, pkg, e.message))
         return None
 
     return getattr(module, cls, None)

@@ -4,6 +4,7 @@ import json
 import importlib
 import collections
 import crazyhorse
+from crazyhorse.web import exceptions
 from crazyhorse.configuration.application import ApplicationSection
 from crazyhorse.configuration.crazyhorse import CrazyHorseSection
 from crazyhorse.utils.tools import import_class
@@ -22,8 +23,17 @@ class Configuration(object):
         application_section = ApplicationSection()
         crazyhorse_section  = CrazyHorseSection()
 
-        Configuration.SETTINGS = application_section(config["application"])
-        crazyhorse_section(config["crazyhorse"])
+        try:
+            Configuration.SETTINGS = application_section(config["application"])
+        except KeyError:
+            crazyhorse.get_logger().fatal("No application section defined in config")
+            raise exceptions.ConfigurationErrorException("No application section defined in config")
+
+        try:
+            crazyhorse_section(config["crazyhorse"])
+        except KeyError:
+            crazyhorse.get_logger().fatal("No crazyhorse section defined in config")
+            raise exceptions.ConfigurationErrorException("No crazyhorse section defined in config")
 
         if "custom_sections" in config:
             for custom_section in config["custom_sections"]:
@@ -37,7 +47,7 @@ class Configuration(object):
         obj     = None
         section = None
 
-        crazyhorse.get_logger().info("Processing {0} Configuration".format(cls.__name__))
+        crazyhorse.get_logger().debug("Processing {0} Configuration".format(cls.__name__))
 
         if name in config:
             section = config[name]
