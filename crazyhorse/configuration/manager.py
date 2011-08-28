@@ -54,7 +54,9 @@ class Configuration(object):
 
         obj = cls()
 
+        config_name = "CUSTOM_" + name.upper()
+
         if section:
-            setattr(Configuration, name.upper(), obj(section))
+            setattr(Configuration, config_name, obj(section))
         else:
-            setattr(Configuration, name.upper(), obj())
+            setattr(Configuration, config_name, obj())
