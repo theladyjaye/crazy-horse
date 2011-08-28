@@ -19,7 +19,6 @@ class Application(object):
         crazyhorse.get_logger().info("Initializing CrazyHorse")
         crazyhorse.get_logger().debug("Processing Configuration")
         Configuration()
-        return
 
         if application is not None:
             application_start = getattr(application, "application_start", None)
