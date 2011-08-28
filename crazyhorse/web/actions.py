@@ -16,8 +16,10 @@ def route(name, path, method="GET", constraints=None):
         file_path = os.path.splitext(file_path)[0]
     else:
         # not uwsgi initialized
-        prefix_length = len(os.getcwd()) + 1
-        file_path     = os.path.splitext(file_path[prefix_length:])[0]
+        cwd = os.getcwd()
+        if file_path.startswith(cwd):
+            prefix_length = len(os.getcwd()) + 1
+            file_path     = os.path.splitext(file_path[prefix_length:])[0]
 
     module_path   = file_path.replace("/", ".")
 
@@ -51,8 +53,10 @@ def route_method(method, route_name):
         file_path = os.path.splitext(file_path)[0]
     else:
         # not uwsgi initialized
-        prefix_length = len(os.getcwd()) + 1
-        file_path     = os.path.splitext(file_path[prefix_length:])[0]
+        cwd = os.getcwd()
+        if file_path.startswith(cwd):
+            prefix_length = len(os.getcwd()) + 1
+            file_path     = os.path.splitext(file_path[prefix_length:])[0]
 
     module_path   = file_path.replace("/", ".")
 

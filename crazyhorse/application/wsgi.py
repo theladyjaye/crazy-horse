@@ -29,7 +29,6 @@ class Application(object):
 
 
     def __call__(self, environ, start_response):
-
             request_handlers = {}
             route            = None
             context          = HttpContext(environ, start_response)
@@ -48,6 +47,7 @@ class Application(object):
             except (exceptions.RouteExecutionException):
                 start_response("404 NOT FOUND", [])
                 return []
+
             #context.request     = Request(environ, request_handlers)
             #context.response    = Response(start_response)
             start_response("200 OK", [])
