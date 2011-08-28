@@ -24,13 +24,13 @@ class Configuration(object):
         crazyhorse_section  = CrazyHorseSection()
 
         try:
-            Configuration.SETTINGS = application_section(config["application"])
+            Configuration.APPLICATION_SETTINGS = application_section(config["application"])
         except KeyError:
             crazyhorse.get_logger().fatal("No application section defined in config")
             raise exceptions.ConfigurationErrorException("No application section defined in config")
 
         try:
-            crazyhorse_section(config["crazyhorse"])
+            Configuration.CRAZYHORSE_HANDLERS = crazyhorse_section(config["crazyhorse"])
         except KeyError:
             crazyhorse.get_logger().fatal("No crazyhorse section defined in config")
             raise exceptions.ConfigurationErrorException("No crazyhorse section defined in config")

@@ -12,7 +12,6 @@ class Application(object):
         #self.sessions       = options["sessions"] if "sessions" in options else None
         #self.cookies        = options["cookies"] if "cookies" in options else None
         #self.request_parser = options["request_parser"] if "request_parser" in options else None
-        #self.views          = options["views"] if "views" in options else None
 
 
         # fire it up!
