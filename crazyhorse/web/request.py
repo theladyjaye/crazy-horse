@@ -1,3 +1,4 @@
+
 class Request(object):
 
     def __init__(self, environ):
@@ -13,6 +14,7 @@ class Request(object):
         self.language       = environ.get("HTTP_ACCEPT_LANGUAGE", "en-US")
         self.charset        = environ.get("HTTP_ACCEPT_CHARSET", "utf-8")
         self.remote_address = environ.get("REMOTE_ADDR", "0.0.0.0")
+        self.querystring    = None
         #self.params         = RequestParams({})
         #self.files          = RequestParams({})
 
@@ -28,9 +30,6 @@ class Request(object):
         #if request_parser:
 #
         #    parser = request_parser()
-#
-        #    querystring = parser.parse_querystring(environ["QUERY_STRING"])
-        #    self.params.update(querystring)
 #
 #
         #    if content_length > 0:

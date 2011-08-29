@@ -1,6 +1,7 @@
 import crazyhorse
 from crazyhorse.configuration.manager import Configuration
 from crazyhorse.web.httpcontext import HttpContext
+from crazyhorse.web.response import Response
 from crazyhorse.web import exceptions
 from crazyhorse.web import routing
 
@@ -29,12 +30,16 @@ class Application(object):
 
 
     def __call__(self, environ, start_response):
+
+            #print(environ)
             request_handlers = {}
             route            = None
-            context          = HttpContext(environ, start_response)
+            context          = None
+            path             = environ["PATH_INFO"]
             router           = routing.application_router
+
             try:
-                route = router.route_for_path(context.request.path)
+                route = router.route_for_path(path)
             except (exceptions.InvalidRoutePathException):
                 try:
                     route = router.route_with_name("404")
@@ -42,17 +47,23 @@ class Application(object):
                     start_response("404 NOT FOUND", [])
                     return []
 
-            try:
-                route(context)
-            except (exceptions.RouteExecutionException):
-                start_response("404 NOT FOUND", [])
-                return []
+
+            # will need this back in
+            #try:
+            #    route(context)
+            #except (exceptions.RouteExecutionException):
+            #    start_response("404 NOT FOUND", [])
+            #    return []
 
             #context.request     = Request(environ, request_handlers)
             #context.response    = Response(start_response)
+            #it's not a 404, start up the context we have an actual route
+
+            context = HttpContext(environ, start_response)
             start_response("200 OK", [])
             return ["It Works!"]
 
+            # shouldn't need any of this context setup
             handlers = {"environ":environ,
                         "request_parser": self.request_parser,
                         "cookies":self.cookies,
