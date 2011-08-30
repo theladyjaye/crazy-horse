@@ -14,33 +14,10 @@ class Request(object):
         self.language       = environ.get("HTTP_ACCEPT_LANGUAGE", "en-US")
         self.charset        = environ.get("HTTP_ACCEPT_CHARSET", "utf-8")
         self.remote_address = environ.get("REMOTE_ADDR", "0.0.0.0")
+
         self.querystring    = None
-        #self.params         = RequestParams({})
-        #self.files          = RequestParams({})
-
-        #self.cookies = None if cookies is None else cookies(environ.get("HTTP_COOKIE", None))
-
-        #content_length = -1
-#
-        #try:
-        #    content_length = int(environ.get("CONTENT_LENGTH", "0"))
-        #except ValueError, e: pass
-#
-#
-        #if request_parser:
-#
-        #    parser = request_parser()
-#
-#
-        #    if content_length > 0:
-        #        values = {"content_type":environ.get("CONTENT_TYPE", "application/unknown"),
-        #                  "length": content_length,
-        #                  "data":environ["wsgi.input"]}
-#
-        #        # merge a dictionary:
-        #        # http://stackoverflow.com/questions/38987/how-can-i-merge-two-python-dictionaries-as-a-single-expression
-        #        body = parser.parse_body(**values)
-        #        self.params.update(body)
-#
-        #        if len(parser.files) > 0:
-        #            self.files.update(parser.files)
+        self.cookies        = None
+        self.session        = None
+        self.params         = None
+        self.files          = None
+        self.headers        = None

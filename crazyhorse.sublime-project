@@ -7,19 +7,59 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+			"settings":
+			{
+				"buffer_size": 860,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/httpcontext.py",
+			"settings":
+			{
+				"buffer_size": 346,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
+			"settings":
+			{
+				"buffer_size": 3685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
+			"settings":
+			{
+				"buffer_size": 1707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/crazyhorse.py",
+			"settings":
+			{
+				"buffer_size": 1297,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 159,
+		"height": 45,
 		"selected_items":
 		[
 			[
-				"js",
+				"json",
 				"Set Syntax: JSON"
 			],
 			[
-				"json",
+				"js",
 				"Set Syntax: JSON"
 			],
 			[
@@ -47,18 +87,47 @@
 	},
 	"file_history":
 	[
+		"/Users/dev/Projects/APP_Rodeo/www/organism/lucy/requestparser.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/cookies.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/httpcontext.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/utils/tools.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/manager.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test_routes.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/crazyhorse.py",
+		"/Users/dev/Projects/APP_Rodeo/www/organism/net/request.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/params.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/querystrings.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/mappingTest.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/handlers/cookies.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/handlers/querystrings.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/manager.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/handlers/__init__.py",
+		"/Users/dev/Projects/APP_Rodeo/www/organism/lucy/cookies.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/context.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/response.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test_base.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/views.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/actions.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/application.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/routes.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test_404.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/base.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/admin/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/tmp/settings.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/utils/tools.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/admin/dashboard.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/configuration/test_section.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/sections.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/application.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/foo.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/section.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/configuration/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/__init__.py",
@@ -69,8 +138,6 @@
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/core.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/system.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/applications/wsgi.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/__init__.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/actions.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/routing.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/settings.py",
@@ -88,19 +155,14 @@
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/logging/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/utils/__init__.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/base.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/config.py",
 		"/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/nav.html",
 		"/Users/dev/Projects/WWW_DisneyMobile/DEV_Deploy/resources/css/src/global-search.scss",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config.xml",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/routes.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/views.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/controller.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo_put.html",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo_post.html",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo.html",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/__init__.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/views.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/controller.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/errors.py",
@@ -108,13 +170,9 @@
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/TestCrazyHorseBase.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/default.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/untitled",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/ServerErrorsController.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/response.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/httpcontext.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/home.py",
-		"/Users/dev/Projects/APP_Rodeo/www/organism/net/request.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/annotations.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/annotationTest.py",
 		"/Users/dev/Projects/APP_Rodeo/www/organism/lucy/router.py",
@@ -142,6 +200,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"parse_body",
+			"routing",
+			"Processing",
 			"print",
 			"future",
 			"__future",
@@ -176,8 +237,146 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+					"settings":
+					{
+						"buffer_size": 860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								687,
+								707
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/httpcontext.py",
+					"settings":
+					{
+						"buffer_size": 346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
+					"settings":
+					{
+						"buffer_size": 3685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2382,
+								2382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
+					"settings":
+					{
+						"buffer_size": 1707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								965,
+								965
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/crazyhorse.py",
+					"settings":
+					{
+						"buffer_size": 1297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -212,10 +411,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.find_results":
-	{
-		"height": 92
-	},
 	"replace":
 	{
 		"height": 0

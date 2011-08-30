@@ -1,7 +1,26 @@
-from test_base import TestCrazyHorseBase
 import unittest
+import os
+from test_base import TestCrazyHorseBase
+from context import TestContext
+
 
 class TestCrazyHorseRoutes(TestCrazyHorseBase):
+
+    def test_post(self):
+
+      context  = TestContext.default_context()
+      filename = os.getcwd() + "/tests/input/data-x-www-form-urlencoded.txt"
+      filesize = os.path.getsize(filename)
+      body     = open(filename, "r")
+
+      context["REQUEST_METHOD"] = "POST"
+      context["PATH_INFO"]      = "/about/12345/read"
+      context["wsgi.input"]     = body
+      context["CONTENT_LENGTH"] = filesize
+      context["CONTENT_TYPE"] = "application/x-www-form-urlencoded"
+
+      self.application(context, TestContext.default_response())
+      self.assertTrue(True)
 
     def test_foo(self):
         #print("TestCrazyHorseRoutes: " + str(self))

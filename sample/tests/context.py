@@ -1,6 +1,10 @@
 class TestContext(object):
 
     @classmethod
+    def default_response(cls):
+        return lambda x,y: x
+
+    @classmethod
     def default_context(cls):
          return {'wsgi.multiprocess': False,
                  'REQUEST_METHOD': 'GET',
@@ -18,18 +22,18 @@ class TestContext(object):
                  'SERVER_PORT': '80',
                  'x-wsgiorg.uwsgi.version': '0.9.6.2',
                  'DOCUMENT_ROOT': '/usr/local/Cellar/nginx/1.0.2/html',
-                 'wsgi.input': <open file 'wsgi_input', mode 'r' at 0x10110b4b0>,
+                 'wsgi.input': None, #<open file 'wsgi_input', mode 'r' at 0x10110b4b0>,
                  'HTTP_HOST': 'rodeo',
                  'wsgi.multithread': False,
                  'REQUEST_URI': '/foo.bar/baz/nanobot?&id=12',
                  'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
                  'wsgi.version': (1, 0),
                  'wsgi.run_once': False,
-                 'wsgi.errors': <open file 'wsgi_input', mode 'w' at 0x101231150>,
+                 'wsgi.errors': None, #<open file 'wsgi_input', mode 'w' at 0x101231150>,
                  'REMOTE_PORT': '55322',
                  'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.8',
                  'CONTENT_TYPE': '',
-                 'wsgi.file_wrapper': <built-in function uwsgi_sendfile>,
+                 'wsgi.file_wrapper': None, #<built-in function uwsgi_sendfile>,
                  'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch'}
 
     def __init__(self):

@@ -14,7 +14,7 @@ class Response(object):
         self.headers = Headers()
         self.headers.add("content-type", "text/plain", charset="utf-8")
 
-        self.cookies = None if cookies is None else cookies()
+        self.cookies = None
         self.out     = []
 
     def write(self, value):

@@ -48,7 +48,7 @@ class Application(object):
                     return []
 
 
-            # will need this back in
+            # will need this back in (8/28)
             #try:
             #    route(context)
             #except (exceptions.RouteExecutionException):
@@ -60,10 +60,15 @@ class Application(object):
             #it's not a 404, start up the context we have an actual route
 
             context = HttpContext(environ, start_response)
+
+            # apply features
+            application_features = Configuration.CRAZYHORSE_FEATURES
+            [application_features[x](context) for x in application_features]
+
             start_response("200 OK", [])
             return ["It Works!"]
 
-            # shouldn't need any of this context setup
+            # shouldn't need any of this context setup drama
             handlers = {"environ":environ,
                         "request_parser": self.request_parser,
                         "cookies":self.cookies,

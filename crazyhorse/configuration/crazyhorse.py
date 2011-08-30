@@ -12,31 +12,36 @@ class CrazyHorseSection(ConfigurationSection):
     def initialize_features(self, section):
         result = {}
 
-        #if "cookies" in section:
-            #result["cookies"] = self.initialize_cookie_handler(section["cookies"])
+        if "request_body" in section:
+            crazyhorse.get_logger().debug("Feature Enabled: Request Body")
+            result["request_body"] = self.load_feature(section["request_body"])
+
+        if "sessions" in section:
+            crazyhorse.get_logger().debug("Feature Enabled: Sessions")
+            result["sessions"] = self.load_feature(section["sessions"])
+
+        if "cookies" in section:
+            crazyhorse.get_logger().debug("Feature Enabled: Cookies")
+            result["cookies"] = self.load_feature(section["cookies"])
 
         if "querystrings" in section:
-            result["querystrings"] = self.initialize_querystring_handler(section["querystrings"])
+            crazyhorse.get_logger().debug("Feature Enabled: Query Strings")
+            result["querystrings"] = self.load_feature(section["querystrings"])
 
         return result
 
-
-    def initialize_cookie_handler(self, pkg):
-        cls = import_class(pkg)
-        return cls()
-
-    def initialize_querystring_handler(self, pkg):
-        cls = import_class(pkg)
-        return cls
+    def load_feature(self, pkg):
+        obj = import_class(pkg)
+        return obj
 
     def __call__(self, section):
+
         crazyhorse.get_logger().debug("Processing CrazyHorse Configuration")
         features = None
 
         try:
             features = self.initialize_features(section["features"])
         except KeyError:
-            crazyhorse.get_logger().fatal("No crazyhorse handlers defined in config")
-            raise exceptions.ConfigurationErrorException("No crazyhorse handlers defined in config")
+            crazyhorse.get_logger().critical("No crazyhorse features defined in config")
 
         return features
