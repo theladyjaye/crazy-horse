@@ -60,7 +60,7 @@ def parse_mime_multipart(boundary, body):
 
             #temp = tempfile.NamedTemporaryFile(delete=False)
             #print temp.name
-            files[key].append({"filename":meta["filename"], "tmp_file":temp.name})
+            #files[key].append({"filename":meta["filename"], "tmp_file":temp.name})
 
 
     return params

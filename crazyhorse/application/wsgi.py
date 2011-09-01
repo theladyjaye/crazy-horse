@@ -55,12 +55,9 @@ class Application(object):
             #    start_response("404 NOT FOUND", [])
             #    return []
 
-            #context.request     = Request(environ, request_handlers)
-            #context.response    = Response(start_response)
             #it's not a 404, start up the context we have an actual route
-
             context = HttpContext(environ, start_response)
-            return
+
             #print(environ)
             #content_length = -1
             #try:

@@ -1,4 +1,5 @@
-#from organism.net.headers import Headers
+from crazyhorse.web.headers import Headers
+
 class Response(object):
     OK                = "200 OK"
     MOVED_PERMANENTLY = "301 Moved Permanently"
@@ -7,7 +8,7 @@ class Response(object):
     NOT_FOUND         = "404 Not Found"
 
     def __init__(self, handler, cookies=None):
-        return
+
         self.handler = handler
         self.status  = Response.OK
 

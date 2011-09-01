@@ -20,7 +20,7 @@ def feature_forms(context):
 
             data = ParamCollection(parser.parse_body(**values))
             context.request.data = data
-            print("----------------{0}-------------".format(content_length))
+
             for x in data:
                 print("{0}: {1}".format(x, data[x]))
             # TODO handle files
