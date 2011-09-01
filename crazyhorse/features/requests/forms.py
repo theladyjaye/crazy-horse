@@ -18,9 +18,11 @@ def feature_forms(context):
             # merge a dictionary:
             # http://stackoverflow.com/questions/38987/how-can-i-merge-two-python-dictionaries-as-a-single-expression
 
-            params = ParamCollection(parser.parse_body(**values))
-            context.request.params = params
-
+            data = ParamCollection(parser.parse_body(**values))
+            context.request.data = data
+            print("----------------{0}-------------".format(content_length))
+            for x in data:
+                print("{0}: {1}".format(x, data[x]))
             # TODO handle files
             #if len(parser.files) > 0:
             #    self.files.update(parser.files)

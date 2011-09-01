@@ -1,4 +1,12 @@
 import tempfile
+def parse_multipart_headers(input):
+    headers = input.split("\r\n")
+
+    def split(item):
+        return item.split(":")
+
+    return { k.strip().lower():v.strip() for k,v in map(split, headers) }
+
 def parse_mime_multipart(boundary, body):
     prefix     = "--"
     params     = {"files":{},
@@ -18,7 +26,7 @@ def parse_mime_multipart(boundary, body):
         # If we check from the right first we could hit an empty
         # value, and that throw things out of wack
         header_end  = part.find("\r\n\r\n")
-        headers     = parse_http_headers(part[:header_end])
+        headers     = parse_multipart_headers(part[:header_end])
         disposition = headers.get("content-disposition", "")
 
         if not disposition: continue # malformed disposition -- no op

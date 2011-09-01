@@ -6,6 +6,22 @@ from context import TestContext
 
 class TestCrazyHorseRoutes(TestCrazyHorseBase):
 
+    def test_multipart_form(self):
+
+      context  = TestContext.default_context()
+      filename = os.getcwd() + "/tests/input/data-multipart-form-data.txt"
+      filesize = os.path.getsize(filename)
+      body     = open(filename, "r")
+
+      context["REQUEST_METHOD"] = "POST"
+      context["PATH_INFO"]      = "/about/12345/read"
+      context["wsgi.input"]     = body
+      context["CONTENT_LENGTH"] = filesize
+      context["CONTENT_TYPE"] = "multipart/form-data"
+
+      self.application(context, TestContext.default_response())
+      self.assertTrue(True)
+
     def test_post(self):
 
       context  = TestContext.default_context()
@@ -32,6 +48,6 @@ class TestCrazyHorseRoutes(TestCrazyHorseBase):
                                "HTTP_ACCEPT_LANGUAGE":"en-US",
                                "HTTP_ACCEPT_CHARSET":"utf-8",
                                "REMOTE_ADDR":"127.0.0.1"}
-        test_start_response = lambda x,y: x
-        self.application(test_environ, test_start_response)
+
+        self.application(test_environ, TestContext.default_response())
         self.assertTrue(True)

@@ -60,6 +60,19 @@ class Application(object):
             #it's not a 404, start up the context we have an actual route
 
             context = HttpContext(environ, start_response)
+            return
+            #print(environ)
+            #content_length = -1
+            #try:
+            #    content_length = int(context.environ.get("CONTENT_LENGTH", "0"))
+            #except ValueError:
+            #    pass
+
+            #if "wsgi.input" in environ:
+            #    print(content_length)
+            #    #data = environ["wsgi.input"].read(content_length)
+            #    f = open("multipart-request.txt", "wb")
+            #    f.write(environ["wsgi.input"].read(content_length))
 
             # apply features
             application_features = Configuration.CRAZYHORSE_FEATURES

@@ -1,4 +1,4 @@
-
+from crazyhorse.web.headers import Headers
 class Request(object):
 
     def __init__(self, environ):
@@ -18,6 +18,8 @@ class Request(object):
         self.querystring    = None
         self.cookies        = None
         self.session        = None
-        self.params         = None
+        self.data           = None
         self.files          = None
-        self.headers        = None
+
+        header_values       = [(x[5:].replace("_", "-").lower(), environ[x]) for x in environ if x.startswith("HTTP")]
+        self.headers        = Headers(header_values)
