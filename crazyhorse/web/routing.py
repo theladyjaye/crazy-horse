@@ -1,6 +1,6 @@
 import re
 from crazyhorse.web import exceptions
-
+from crazyhorse.utils.tools import import_class
 def register_route(name, controller, action, path, method="GET", constraints=None):
     route = Route(path, constraints)
     route.register_action_for_method(method, controller, action)
@@ -90,11 +90,12 @@ class Route(object):
                 else:
                     raise e
 
-    def __call__(self, httpcontext):
-        method     = httpcontext.request.request_method
+    def __call__(self, context):
+        path       = context.path
+        method     = context.method
         controller = None
         action     = None
-        klass      = None
+        cls        = None
 
         try:
             controller, action = self.action_with_method(method)
@@ -106,30 +107,32 @@ class Route(object):
                     route.action_with_method("404")
                 except KeyError:
                     raise exceptions.RouteExecutionException()
-            except (exceptions.InvalidRouteNameException):
+            except exceptions.InvalidRouteNameException:
                 raise exceptions.RouteExecutionException()
 
         if controller not in route_controller_registry:
-            parts       = controller.split(".")
-            classname   = parts.pop()
-            module_path = ".".join(parts)
-
-
-            module      = __import__(module_path, globals(), locals(), [classname])
-            klass       = getattr(module, classname)
-            route_controller_registry[controller] = klass
+            cls = import_class(controller)
+            route_controller_registry[controller] = cls
         else:
-            klass = route_controller_registry[controller]
+            cls = route_controller_registry[controller]
 
         params = {}
 
         if self.params:
-            result = self.pattern.match(httpcontext.request.path)
+            result = self.pattern.match(path)
             params = dict(zip(self.params, result.groups()))
 
-        obj    = klass()
+        obj = cls()
+        obj._current_context = context
+        
+        try:
+            init = getattr(obj, "initialize")
+            init(context.request)
+        except KeyError:
+            pass
+        
         method = getattr(obj, action)
-        method(**params)
+        return method(**params)
 
 temp_routes               = {}
 route_controller_registry = {}

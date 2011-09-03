@@ -9,7 +9,7 @@ class TestCrazyHorseRoutes(TestCrazyHorseBase):
     def test_multipart_form(self):
 
       context  = TestContext.default_context()
-      filename = os.getcwd() + "/tests/input/data-multipart-form-data.txt"
+      filename = os.getcwd() + "/tests/input/data-multipart-form-data-chrome.txt"
       filesize = os.path.getsize(filename)
       body     = open(filename, "r")
 

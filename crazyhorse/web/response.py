@@ -13,7 +13,7 @@ class Response(object):
         self.status  = Response.OK
 
         self.headers = Headers()
-        self.headers.add("content-type", "text/plain", charset="utf-8")
+        #self.headers.add("content-type", "text/plain", charset="utf-8")
 
         self.cookies = None
         self.out     = []
@@ -23,6 +23,7 @@ class Response(object):
 
     def __call__(self, session=None, result=None):
         value = None
+        #self.headers.add("Content-Type", result.content_type)
 
         if result is not None:
             value = result()

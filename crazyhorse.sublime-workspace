@@ -7,6 +7,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart.py",
+			"settings":
+			{
+				"buffer_size": 5137,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_defnull.py",
+			"settings":
+			{
+				"buffer_size": 18222,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/mime_multipart.py",
+			"settings":
+			{
+				"buffer_size": 2011,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-multipart-form-data-chrome.txt",
+			"settings":
+			{
+				"buffer_size": 89997,
+				"line_ending": "Mac"
+			}
+		},
+		{
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_old.py",
+			"settings":
+			{
+				"buffer_size": 3629,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -56,34 +96,37 @@
 	},
 	"file_history":
 	[
-		"/Users/dev/Projects/APP_CrazyHorse/sample/multipart-request.txt",
+		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-multipart-form-data.txt",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/mime_multipart.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/form_parser.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/forms.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/response.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/headers.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test_routes.py",
+		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/multipart-request.txt",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/forms.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/form_parser.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/mime_multipart.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/application/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/httpcontext.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/headers.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/request.py",
 		"/Users/dev/Projects/APP_Rodeo/www/rodeo_tornado.zip",
-		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings",
 		"/Users/dev/Projects/APP_Rodeo/www/rodeo/views/index.html",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/context.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/forms.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-multipart-form-data.txt",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-x-www-form-urlencoded.txt",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/crazyhorse.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/response.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data_x-www-form-urlencoded.txt",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/form_parser.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/forms.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/sessions.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/application.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/httpcontext.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/mime_multipart.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/formparser.py",
 		"/Users/dev/Projects/APP_Rodeo/www/organism/lucy/requestparser.py",
@@ -190,6 +233,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"parse_options_header",
+			"MultiDict",
+			"multipart/mixed",
+			"TemporaryFile",
+			"Headers",
+			"tob",
 			"headers",
 			"tempfile",
 			"parse_body",
@@ -220,8 +269,147 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart.py",
+					"settings":
+					{
+						"buffer_size": 5137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_defnull.py",
+					"settings":
+					{
+						"buffer_size": 18222,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15416,
+								15416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 5001,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/mime_multipart.py",
+					"settings":
+					{
+						"buffer_size": 2011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								792,
+								802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 94,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-multipart-form-data-chrome.txt",
+					"settings":
+					{
+						"buffer_size": 89997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_old.py",
+					"settings":
+					{
+						"buffer_size": 3629,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3288,
+								3464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 11,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

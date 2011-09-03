@@ -14,8 +14,14 @@ class Jinja2View(object):
         response.headers.add("content-type", "text/html", charset="utf-8")
         return template.render(self.model) + "<pre>{0}</pre>".format(str(self.context.environ))
 
+
 class CrazyHorseView(object):
 
     def __init__(self, name, model):
         self.name  = name
         self.model = model
+
+class RedriectView(CrazyHorseView):
+
+    def __call__(self):
+        pass

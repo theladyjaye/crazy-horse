@@ -29,9 +29,11 @@ class Application(object):
 
 
 
-    def __call__(self, environ, start_response):
+    def failure(self, start_response):
+        start_response("404 NOT FOUND", [])
+        return []
 
-            #print(environ)
+    def __call__(self, environ, start_response):
             request_handlers = {}
             route            = None
             context          = None
@@ -44,20 +46,13 @@ class Application(object):
                 try:
                     route = router.route_with_name("404")
                 except:
-                    start_response("404 NOT FOUND", [])
-                    return []
+                    return self.failure(start_response)
 
 
-            # will need this back in (8/28)
-            #try:
-            #    route(context)
-            #except (exceptions.RouteExecutionException):
-            #    start_response("404 NOT FOUND", [])
-            #    return []
-
-            #it's not a 404, start up the context we have an actual route
+            # we have a route object, lets get busy:
             context = HttpContext(environ, start_response)
 
+            # -------- testing stuff
             #print(environ)
             #content_length = -1
             #try:
@@ -70,37 +65,27 @@ class Application(object):
             #    #data = environ["wsgi.input"].read(content_length)
             #    f = open("multipart-request.txt", "wb")
             #    f.write(environ["wsgi.input"].read(content_length))
+            # --------
 
             # apply features
             application_features = Configuration.CRAZYHORSE_FEATURES
             [application_features[x](context) for x in application_features]
 
-            start_response("200 OK", [])
-            return ["It Works!"]
-
-            # shouldn't need any of this context setup drama
-            handlers = {"environ":environ,
-                        "request_parser": self.request_parser,
-                        "cookies":self.cookies,
-                        "session":self.sessions}
-
-            context             = HttpContext()
-            context.request     = Request(**handlers)
-            context.response    = Response(start_response, self.cookies)
-            context.session     = None if self.sessions is None else  self.sessions(context.request)
-            context.view_engine = self.views
-            context.environ     = environ
+            #start_response("200 OK", [])
+            #return ["It Works!"]
 
             result = None
-            route  = router.fetch_route(context)
 
             #if route.controller.requires_authorization and self.authorization is not None:
             #    if self.authorization.request_is_authorized(request) is False:
 
 
             if route is not None:
-                route.context = context
-                result = route()
+                try:
+                    result = route(context)
+                except exceptions.RouteExecutionException:
+                    return self.failure(start_response)
             else:
-                return
+                return self.failure(start_response)
+            
             return context.response(session=context.session, result=result)

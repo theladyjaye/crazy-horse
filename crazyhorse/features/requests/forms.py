@@ -1,8 +1,13 @@
-from crazyhorse.features.requests.form_parser import FormParser
+import urlparse
 from crazyhorse.features.params import ParamCollection
+from crazyhorse.features.requests.multipart import MultipartParser
 
 def feature_forms(context):
     content_length = -1
+    content_type   = context.environ.get("CONTENT_TYPE", "application/unknown")
+    data           = context.environ.get("wsgi.input", None)
+    params         = {}
+    files          = {}
 
     try:
         content_length = int(context.environ.get("CONTENT_LENGTH", "0"))
@@ -10,19 +15,16 @@ def feature_forms(context):
         pass
 
     if content_length > 0:
-            parser = FormParser()
-            values = {"content_type":context.environ.get("CONTENT_TYPE", "application/unknown"),
-                      "length": content_length,
-                      "data":context.environ["wsgi.input"]}
+            
+            if content_type == "application/x-www-form-urlencoded":
+                params = urlparse.parse_qs(data.read(content_length))
 
-            # merge a dictionary:
-            # http://stackoverflow.com/questions/38987/how-can-i-merge-two-python-dictionaries-as-a-single-expression
+            elif content_type.startswith("multipart/form-data"):
+                index    = content_type.rfind("=") + 1
+                boundary = content_type[index:]
+                parser   = MultipartParser(boundary, data)
+                params   = parser.params
+                files    = parser.files
 
-            data = ParamCollection(parser.parse_body(**values))
-            context.request.data = data
-
-            for x in data:
-                print("{0}: {1}".format(x, data[x]))
-            # TODO handle files
-            #if len(parser.files) > 0:
-            #    self.files.update(parser.files)
+    context.request.data  = ParamCollection(params)
+    context.request.files = ParamCollection(files)

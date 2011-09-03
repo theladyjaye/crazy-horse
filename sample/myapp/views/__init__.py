@@ -7,6 +7,7 @@ class Jinja2View(object):
     def __init__(self, name, model):
         self.view_name = name
         self.model     = model;
+        self.content_type = "text/html; charset=utf-8"
 
     def __call__(self):
         # can apply caching logic here if needed
