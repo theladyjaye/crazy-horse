@@ -8,7 +8,7 @@ class AboutController(CrazyHorseController):
            path        = "/about/{item}/{action}",
            constraints = {"item":r"\d+", "action":r"read|archive"})
     def foo(self, item, action):
-        model = {"message":"It Works! (foo)"}
+        model = {"message":"It Works! (foo)", "item":item, "action":action}
         return self.view("about_foo", model)
 
     @route_method("POST","AboutFoo")

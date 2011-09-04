@@ -17,12 +17,12 @@ class ApplicationSection(ConfigurationSection):
 
     def initialize_custom_errors(self, custom_errors):
         router = routing.application_router
+
         for error in custom_errors:
             controller = error["controller"]
             action     = error["action"]
-            code       = error["code"]
+            code       = str(error["code"])
             method     = error["method"]
-
             route      = None
 
             try:

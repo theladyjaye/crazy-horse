@@ -5,8 +5,6 @@ class ServerErrorController(CrazyHorseController):
         model = {"message":"There was an error"}
         return self.view("generic_404", model)
 
-    def error_404_get(self):
-        pass
-
-    def error_404_other(self):
-        pass
+    def error_500(self):
+        model = {"message":"There was an error"}
+        return self.view("generic_500", model)

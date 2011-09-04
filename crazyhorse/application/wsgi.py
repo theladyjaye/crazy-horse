@@ -8,13 +8,7 @@ from crazyhorse.web import routing
 class Application(object):
 
     def __init__(self, application=None):
-        #self.router         = options["router"]() if "router" in options else None
-        #self.authorization  = options["authorization"]() if "authorization" in options else None
-        #self.sessions       = options["sessions"] if "sessions" in options else None
-        #self.cookies        = options["cookies"] if "cookies" in options else None
-        #self.request_parser = options["request_parser"] if "request_parser" in options else None
-
-
+        
         # fire it up!
         crazyhorse.get_logger().info("Initializing CrazyHorse")
         crazyhorse.get_logger().debug("Processing Configuration")
@@ -29,8 +23,12 @@ class Application(object):
 
 
 
-    def failure(self, start_response):
+    def error_404(self, start_response):
         start_response("404 NOT FOUND", [])
+        return []
+    
+    def error_500(self, start_response):
+        start_response("500 INTERNAL SERVER ERROR", [])
         return []
 
     def __call__(self, environ, start_response):
@@ -46,7 +44,7 @@ class Application(object):
                 try:
                     route = router.route_with_name("404")
                 except:
-                    return self.failure(start_response)
+                    return self.error_404(start_response)
 
 
             # we have a route object, lets get busy:
@@ -71,21 +69,27 @@ class Application(object):
             application_features = Configuration.CRAZYHORSE_FEATURES
             [application_features[x](context) for x in application_features]
 
-            #start_response("200 OK", [])
-            #return ["It Works!"]
-
             result = None
 
-            #if route.controller.requires_authorization and self.authorization is not None:
-            #    if self.authorization.request_is_authorized(request) is False:
+            
+            # TODO I think I can make this nicer
+            # Feels a little sloppy to me
 
+            # TODO add hook for authorization/authentication
 
             if route is not None:
                 try:
                     result = route(context)
                 except exceptions.RouteExecutionException:
-                    return self.failure(start_response)
+                    return self.error_404(start_response)
             else:
-                return self.failure(start_response)
-            
-            return context.response(session=context.session, result=result)
+                return self.error_404(start_response)
+            try:
+                return context.response(session=context.session, result=result)
+            except:
+                try:
+                    route  = router.route_with_name("500")
+                    result = route(context)
+                    return context.response(session=context.session, result=result)
+                except:
+                    return self.error_500(start_response)
