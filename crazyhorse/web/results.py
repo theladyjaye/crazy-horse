@@ -1,3 +1,4 @@
+import json
 from crazyhorse.web.response import Response
 
 class CrazyHorseResult(object):
@@ -12,6 +13,22 @@ class CrazyHorseResult(object):
     @property
     def content_type(self):
         return "text/plain"
+
+class SimpleJsonResult(CrazyHorseResult):
+
+    def __init__(self, json, encode=False):
+        if encode:
+            self.json = json.dumps(json)
+        else:
+            self.json = json
+    
+    @property
+    def content_type(self):
+        return "application/json"
+
+    def __call__(self):
+        
+        return self.json
 
 class Redirect(CrazyHorseResult):
 
