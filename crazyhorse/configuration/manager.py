@@ -11,7 +11,8 @@ from crazyhorse.utils.tools import import_class
 
 class Configuration(object):
 
-    SETTINGS = None
+    APP_SETTINGS        = None
+    CRAZYHORSE_FEATURES = None
 
     def __init__(self):
         config_json = open(os.getcwd() + "/crazyhorse.config")
@@ -54,7 +55,7 @@ class Configuration(object):
 
         obj = cls()
 
-        config_name = "CUSTOM_" + name.upper()
+        config_name = "CUSTOM_" + name.upper().replace("-", "_")
 
         if section:
             setattr(Configuration, config_name, obj(section))
