@@ -22,22 +22,6 @@ class Application(object):
                 application_start()
 
 
-
-    def error_404(self, start_response):
-        start_response("404 NOT FOUND", [])
-        return []
-    
-    def error_500(self, start_response):
-        try:
-            route  = router.route_with_name("500")
-            result = route(context)
-        except:
-            return self.error_500(start_response)
-
-
-        start_response("500 INTERNAL SERVER ERROR", [])
-        return []
-
     def __call__(self, environ, start_response):
             request_handlers = {}
             route            = None
@@ -52,7 +36,7 @@ class Application(object):
                     route = router.route_with_name("404")
                 except exceptions.InvalidRouteNameException:
                     # No 404 route, we are done here
-                    start_response("404 NOT FOUND", [])
+                    start_response(Response.NOT_FOUND, [])
                     return []
 
 
@@ -86,13 +70,15 @@ class Application(object):
 
             try:
                 context.response.result = route(context)
-            except exceptions.RouteExecutionException:
+            except exceptions.RouteExecutionException as e:
+                crazyhorse.get_logger().error(e.message)
+                
                 try:
                     route = router.route_with_name("500")
                     context.response.result = route(context)
                 except exceptions.InvalidRouteNameException, exceptions.RouteExecutionException:
                     # No 500 route, or it failed, in either case we are done here
-                    start_response("500 INTERNAL SERVER ERROR", [])
+                    start_response(Response.SERVER_ERROR, [])
                     return []
-                    
+
             return context

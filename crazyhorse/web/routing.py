@@ -100,8 +100,8 @@ class Route(object):
 
         try:
             controller, action = self.action_with_method(method)
-        except KeyError:
-            raise exceptions.RouteExecutionException()
+        except KeyError as e:
+            raise exceptions.RouteExecutionException(path, e.message)
 
         if controller not in route_controller_registry:
             cls = import_class(controller)
@@ -129,8 +129,12 @@ class Route(object):
         
         try:
             result = method(**params)
-        except:
-            raise exceptions.RouteExecutionException()
+
+            if result is not None:
+                result._current_context = context
+
+        except Exception as e:
+            raise exceptions.RouteExecutionException(path, "{0} in {1}.{2}".format(e.message, controller, action))
         
         return result
 

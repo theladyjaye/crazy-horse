@@ -21,6 +21,6 @@ class InvalidRoutePathException(Exception):
 
 class RouteExecutionException(Exception):
 
-    def __init__(self, path):
-        self.message = "Invalid route unable to locate existing route for path: {0}".format(path)
+    def __init__(self, path, message):
+        self.message  = "Executing route for {0} failed: {1}".format(path, message)
 

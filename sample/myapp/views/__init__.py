@@ -1,14 +1,18 @@
+from crazyhorse.web.results import CrazyHorseResult
 from jinja2 import Environment, PackageLoader, FileSystemLoader
 #jinja2 = Environment(loader=PackageLoader('myapp', 'views'))
 jinja2 = Environment(loader=FileSystemLoader(['/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views']))
 
 
-class Jinja2View(object):
+class Jinja2View(CrazyHorseResult):
 
     def __init__(self, name, model):
-        self.content_type = "text/html; charset=utf-8"
         self.model        = model;
         self.name         = name
+
+    @property
+    def content_type(self):
+        return "text/html; charset=utf-8"
 
     def __call__(self):
         # can apply caching logic here if needed

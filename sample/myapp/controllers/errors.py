@@ -3,7 +3,7 @@ class ServerErrorController(CrazyHorseController):
 
     def error_404(self):
         model = {"message":"There was an error"}
-        return self.view("generic_404", model)
+        return self.redirect("/about/1234/archive")
 
     def error_500(self):
         model = {"message":"There was an error"}
