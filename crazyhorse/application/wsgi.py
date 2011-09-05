@@ -28,6 +28,13 @@ class Application(object):
         return []
     
     def error_500(self, start_response):
+        try:
+            route  = router.route_with_name("500")
+            result = route(context)
+        except:
+            return self.error_500(start_response)
+
+
         start_response("500 INTERNAL SERVER ERROR", [])
         return []
 
@@ -40,11 +47,13 @@ class Application(object):
 
             try:
                 route = router.route_for_path(path)
-            except (exceptions.InvalidRoutePathException):
+            except exceptions.InvalidRoutePathException:
                 try:
                     route = router.route_with_name("404")
-                except:
-                    return self.error_404(start_response)
+                except exceptions.InvalidRouteNameException:
+                    # No 404 route, we are done here
+                    start_response("404 NOT FOUND", [])
+                    return []
 
 
             # we have a route object, lets get busy:
@@ -69,27 +78,21 @@ class Application(object):
             application_features = Configuration.CRAZYHORSE_FEATURES
             [application_features[x](context) for x in application_features]
 
-            result = None
 
-            
             # TODO I think I can make this nicer
             # Feels a little sloppy to me
 
-            # TODO add hook for authorization/authentication
+            # TODO design hook for authorization/authentication
 
-            if route is not None:
-                try:
-                    result = route(context)
-                except exceptions.RouteExecutionException:
-                    return self.error_404(start_response)
-            else:
-                return self.error_404(start_response)
             try:
-                return context.response(session=context.session, result=result)
-            except:
+                context.response.result = route(context)
+            except exceptions.RouteExecutionException:
                 try:
-                    route  = router.route_with_name("500")
-                    result = route(context)
-                    return context.response(session=context.session, result=result)
-                except:
-                    return self.error_500(start_response)
+                    route = router.route_with_name("500")
+                    context.response.result = route(context)
+                except exceptions.InvalidRouteNameException, exceptions.RouteExecutionException:
+                    # No 500 route, or it failed, in either case we are done here
+                    start_response("500 INTERNAL SERVER ERROR", [])
+                    return []
+                    
+            return context

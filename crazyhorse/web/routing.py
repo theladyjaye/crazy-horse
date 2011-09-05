@@ -96,19 +96,12 @@ class Route(object):
         controller = None
         action     = None
         cls        = None
+        result     = None
 
         try:
             controller, action = self.action_with_method(method)
         except KeyError:
-            # no specific controller/action combo existed for the method 404 it
-            try:
-                route = application_router.route_with_name("404")
-                try:
-                    route.action_with_method("404")
-                except KeyError:
-                    raise exceptions.RouteExecutionException()
-            except exceptions.InvalidRouteNameException:
-                raise exceptions.RouteExecutionException()
+            raise exceptions.RouteExecutionException()
 
         if controller not in route_controller_registry:
             cls = import_class(controller)
@@ -129,10 +122,17 @@ class Route(object):
             init = getattr(obj, "initialize")
             init(context.request)
         except KeyError:
+            # initialize is optional
             pass
         
         method = getattr(obj, action)
-        return method(**params)
+        
+        try:
+            result = method(**params)
+        except:
+            raise exceptions.RouteExecutionException()
+        
+        return result
 
 temp_routes               = {}
 route_controller_registry = {}

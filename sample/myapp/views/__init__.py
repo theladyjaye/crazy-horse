@@ -8,12 +8,12 @@ class Jinja2View(object):
     def __init__(self, name, model):
         self.content_type = "text/html; charset=utf-8"
         self.model        = model;
-        self.view_name    = name
+        self.name         = name
 
     def __call__(self):
         # can apply caching logic here if needed
         #response = self.context.response
-        template = jinja2.get_template(self.view_name + ".html")
+        template = jinja2.get_template(self.name + ".html")
 
         # View Results should be responsible for setting the content type, not the controllers
 

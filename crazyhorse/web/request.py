@@ -3,9 +3,6 @@ class Request(object):
 
     def __init__(self, environ):
 
-        #TODO
-        # Cookie parsing
-        # Request Data parsing
         # self.environment    = environ
         #self.path           = environ["PATH_INFO"]
         #self.request_method = environ.get("REQUEST_METHOD", "GET").upper()

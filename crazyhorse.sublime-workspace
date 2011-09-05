@@ -8,42 +8,26 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart.py",
+			"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
 			"settings":
 			{
-				"buffer_size": 5137,
+				"buffer_size": 3287,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_defnull.py",
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo.html",
 			"settings":
 			{
-				"buffer_size": 18222,
+				"buffer_size": 257,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/mime_multipart.py",
+			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
 			"settings":
 			{
-				"buffer_size": 2011,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-multipart-form-data-chrome.txt",
-			"settings":
-			{
-				"buffer_size": 89997,
-				"line_ending": "Mac"
-			}
-		},
-		{
-			"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_old.py",
-			"settings":
-			{
-				"buffer_size": 3629,
+				"buffer_size": 950,
 				"line_ending": "Unix"
 			}
 		}
@@ -51,9 +35,29 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 49,
+		"height": 343,
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"gist",
+				"Github: Private Gist from Selection"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
 			[
 				"Install",
 				"Package Control: Install Package"
@@ -96,25 +100,39 @@
 	},
 	"file_history":
 	[
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/errors.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/application.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/application/wsgi.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test_routes.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/forms.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/response.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/httpcontext.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/controller.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/routing.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/generic_404.html",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/generic_500.html",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/__init__.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/views.py",
+		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/form_parser.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_old.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-multipart-form-data-chrome.txt",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/mime_multipart.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_defnull.py",
+		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart.py",
 		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
 		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
 		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-multipart-form-data.txt",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/mime_multipart.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/form_parser.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/forms.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse.config",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/response.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/headers.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/request.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test_routes.py",
 		"/Users/dev/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/multipart-request.txt",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/forms.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/form_parser.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/mime_multipart.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/application/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/httpcontext.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/web/request.py",
 		"/Users/dev/Projects/APP_Rodeo/www/rodeo_tornado.zip",
@@ -125,8 +143,6 @@
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data_x-www-form-urlencoded.txt",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/forms.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/sessions.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/application.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/httpcontext.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/features/requests/formparser.py",
 		"/Users/dev/Projects/APP_Rodeo/www/organism/lucy/requestparser.py",
@@ -148,7 +164,6 @@
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test_404.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/test.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/base.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/admin/__init__.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/tmp/settings.py",
@@ -172,7 +187,6 @@
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/system.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/applications/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/routing.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/settings.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/configuration/errors.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/core/settings.py",
@@ -196,9 +210,6 @@
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo_put.html",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo_post.html",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo.html",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/views.py",
-		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/controller.py",
-		"/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/errors.py",
 		"/Users/dev/Projects/APP_CrazyHorse/crazyhorse/web/config.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/wsgi.py",
 		"/Users/dev/Projects/APP_CrazyHorse/sample/tests/TestCrazyHorseBase.py",
@@ -233,6 +244,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CatchAll",
+			"httpcontext",
 			"parse_options_header",
 			"MultiDict",
 			"multipart/mixed",
@@ -274,18 +287,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart.py",
+					"file": "/Users/dev/Projects/APP_CrazyHorse/crazyhorse/application/wsgi.py",
 					"settings":
 					{
-						"buffer_size": 5137,
+						"buffer_size": 3287,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								21,
-								0
+								1036,
+								1036
 							]
 						],
 						"settings":
@@ -302,79 +315,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_defnull.py",
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/myapp/views/about_foo.html",
 					"settings":
 					{
-						"buffer_size": 18222,
+						"buffer_size": 257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15416,
-								15416
+								113,
+								113
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 5001,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/crazyhorse/features/requests/mime_multipart.py",
-					"settings":
-					{
-						"buffer_size": 2011,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								792,
-								802
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 94,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/data-multipart-form-data-chrome.txt",
-					"settings":
-					{
-						"buffer_size": 89997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -383,19 +340,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/tests/input/multipart_old.py",
+					"buffer": 2,
+					"file": "/Users/dev/Projects/APP_CrazyHorse/sample/myapp/controllers/about.py",
 					"settings":
 					{
-						"buffer_size": 3629,
+						"buffer_size": 950,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3288,
-								3464
+								427,
+								427
 							]
 						],
 						"settings":
@@ -405,7 +362,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 11,
+						"translation.y": 0,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -444,6 +401,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 92
+	},
 	"replace":
 	{
 		"height": 62
@@ -495,7 +456,7 @@
 	},
 	"show_minimap": true,
 	"show_open_files": true,
-	"show_tabs": false,
+	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 273.15234375,
 	"status_bar_visible": true

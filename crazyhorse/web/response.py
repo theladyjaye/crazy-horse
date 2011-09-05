@@ -7,38 +7,46 @@ class Response(object):
     FORBIDDEN         = "403 Forbidden"
     NOT_FOUND         = "404 Not Found"
 
-    def __init__(self, handler, cookies=None):
-
-        self.handler = handler
-        self.status  = Response.OK
+    def __init__(self):
 
         self.headers = Headers()
-        #self.headers.add("content-type", "text/plain", charset="utf-8")
-
-        self.cookies = None
+        self.status  = Response.OK
         self.out     = []
+        self.result  = None
 
     def write(self, value):
         self.out.append(value)
 
-    def __call__(self, session=None, result=None):
-        value = None
-        #self.headers.add("Content-Type", result.content_type)
+    def __iter__(self):
+        for item in self.out:
+            yield item
 
+    def __call__(self, environ, start_response):
+        
+        result = self.result
+        
+        # TODO 
+        # cached response could you the wsgi.sendfile option?
+
+        value = None
+        
+        self.headers.add("Content-Type", result.content_type)
+
+        
         if result is not None:
             value = result()
+        
+        if value is not None:
+            self.out.append(value.encode("utf-8"))
 
-            if value is not None:
-                self.out.append(value.encode("utf-8"))
-
-        if self.cookies is not None and session is not None:
-            self.cookies.add(session.key, session.id, path="/")
+        #if self.cookies is not None and session is not None:
+        #    self.cookies.add(session.key, session.id, path="/")
 
         if self.cookies is not None and len(self.cookies) > 0:
             for cookie in self.cookies.header_items():
                 self.headers.add("Set-Cookie", cookie)
-
+        
         #self.headers.add("Set-Cookie", "PHPSESSID=ushobtc017r9eibetu6rhnjcm0", path="/")
-        self.handler(self.status, self.headers.items())
-        return self.out
+        start_response(self.status, self.headers.items())
 
+        return self
