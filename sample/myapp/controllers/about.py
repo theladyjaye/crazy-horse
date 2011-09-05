@@ -4,6 +4,13 @@ from crazyhorse.web.actions import route_method
 
 class AboutController(CrazyHorseController):
 
+    @route(name        = "about_index",
+           path        = "/about")
+    def index(self):
+        model = {"message":"about"}
+        return self.view("about", model)
+
+
     @route(name        = "AboutFoo",
            path        = "/about/{item}/{action}",
            constraints = {"item":r"\d+", "action":r"read|archive"})

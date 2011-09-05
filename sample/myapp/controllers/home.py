@@ -5,4 +5,5 @@ class HomeController(CrazyHorseController):
     @route(name        = "Home",
            path        = "/")
     def index(self):
-        print "HOME!"
+        model = {"message":"home"}
+        return self.view("home", model)
