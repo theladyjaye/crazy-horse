@@ -1,7 +1,7 @@
 import crazyhorse
 from crazyhorse.configuration.manager import Configuration
 from crazyhorse.web.httpcontext import HttpContext
-from crazyhorse.web.response import Response
+from crazyhorse.web.response import ResponseStatus
 from crazyhorse.web import exceptions
 from crazyhorse.web import routing
 
@@ -36,7 +36,7 @@ class Application(object):
                     route = router.route_with_name("404")
                 except exceptions.InvalidRouteNameException:
                     # No 404 route, we are done here
-                    start_response(Response.NOT_FOUND, [])
+                    start_response(ResponseStatus.NOT_FOUND, [])
                     return []
 
 
@@ -78,7 +78,7 @@ class Application(object):
                     context.response.result = route(context)
                 except exceptions.InvalidRouteNameException, exceptions.RouteExecutionException:
                     # No 500 route, or it failed, in either case we are done here
-                    start_response(Response.SERVER_ERROR, [])
+                    start_response(ResponseStatus.SERVER_ERROR, [])
                     return []
 
             return context

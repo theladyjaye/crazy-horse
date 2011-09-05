@@ -1,7 +1,7 @@
 import crazyhorse
 from crazyhorse.web.headers import Headers
 
-class Response(object):
+class ResponseStatus(object):
     OK                = "200 OK"
     MOVED_PERMANENTLY = "301 Moved Permanently"
     MOVED_TEMPORARILY = "302 Moved Temporarily"
@@ -9,10 +9,12 @@ class Response(object):
     NOT_FOUND         = "404 Not Found"
     SERVER_ERROR      = "500 Internal Server Error"
 
+class Response(object):
+
     def __init__(self):
 
         self.headers = Headers()
-        self.status  = Response.OK
+        self.status  = ResponseStatus.OK
         self.out     = []
         self.result  = None
 
