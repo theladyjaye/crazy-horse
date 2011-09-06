@@ -26,16 +26,15 @@ class MultipartException(Exception):
 class MultipartParser(object):
     
     def __init__(self, boundary, data):
-        self.files = {}
-        self.params  = {}
-        self.current_headers = {}
-        self.master_boundary = boundary
-        self.master_boundary_length = len(boundary)
+        self.files                  = {}
+        self.params                 = {}
+        self.current_headers        = {}
+        self.master_boundary        = "--" + boundary
+        self.master_boundary_length = len(boundary) + 2
         self.start_processing(data)
 
     def start_processing(self, data):
         self.validate_master_boundary(data)
-        #self.read_boundry(data)
     
     def end_processing(self):
         pass
@@ -50,7 +49,8 @@ class MultipartParser(object):
                 self.current_headers = {}
                 self.read_headers(data)
         else:
-            self.end_processing()
+            raise MultipartException("Invalid Boundary")
+            
 
 
     def read_boundry(self, data):
@@ -115,23 +115,29 @@ class MultipartParser(object):
             temp_file.write(data.read(self.current_headers["content-length"]))
         else:
             bytes = data.readline()
+
             while not bytes[-2:] == "\r\n":
                 temp_file.write(bytes)
                 bytes = data.readline()
             
             temp_file.write(bytes.rstrip())
         
+        filesize     = temp_file.tell()
+
+        if filesize == 0:
+            self.read_boundry(data)
+            return
+
         key          = self.current_headers["content-disposition"]["name"]
         filename     = self.current_headers["content-disposition"].get("filename", "")
         content_type = self.current_headers["content-type"]
-
+        
         if key not in self.files:
-                self.files[key] = []
-        
-        filesize = temp_file.tell()
-        
+            self.files[key] = []
+
         temp_file.seek(0)
         self.files[key].append({"filename":filename, "filesize":filesize, "content-type":content_type, "data":temp_file})
+        
         self.read_boundry(data)
 
     def read_body(self, data):

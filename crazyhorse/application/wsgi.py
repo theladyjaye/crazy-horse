@@ -50,12 +50,16 @@ class Application(object):
             #    content_length = int(context.environ.get("CONTENT_LENGTH", "0"))
             #except ValueError:
             #    pass
-
+            #
             #if "wsgi.input" in environ:
             #    print(content_length)
-            #    #data = environ["wsgi.input"].read(content_length)
+            #    data = environ["wsgi.input"].read(content_length)
             #    f = open("multipart-request.txt", "wb")
-            #    f.write(environ["wsgi.input"].read(content_length))
+            #    f.write(data)
+            #    #environ["wsgi.input"].seek(0)
+            #
+            #    start_response("200 Ok", [])
+            #    return []
             # --------
 
             # apply features

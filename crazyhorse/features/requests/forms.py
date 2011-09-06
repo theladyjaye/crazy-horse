@@ -1,6 +1,7 @@
 import urlparse
+import crazyhorse
 from crazyhorse.features.params import ParamCollection
-from crazyhorse.features.requests.multipart import MultipartParser
+from crazyhorse.features.requests import multipart
 
 def feature_forms(context):
     content_length = -1
@@ -22,9 +23,16 @@ def feature_forms(context):
             elif content_type.startswith("multipart/form-data"):
                 index    = content_type.rfind("=") + 1
                 boundary = content_type[index:]
-                parser   = MultipartParser(boundary, data)
-                params   = parser.params
-                files    = parser.files
+                
+                parser = None
+
+                try:
+                    parser   = multipart.MultipartParser(boundary, data)
+                    params   = parser.params
+                    files    = parser.files
+                except multipart.MultipartException:
+                    crazyhorse.get_logger().error("Failed to parse multipart/form-data")
+                    pass
 
     context.request.data  = ParamCollection(params)
     context.request.files = ParamCollection(files)
