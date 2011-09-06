@@ -24,6 +24,7 @@ $(document).ready(function()
 			{
 				spinner.stop()
 				delete spinner
+				
 				for(;;)
 				{
 					tweet     = data.shift()
