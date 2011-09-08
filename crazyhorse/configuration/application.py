@@ -2,6 +2,7 @@ from __future__ import absolute_import
 import glob
 import os
 import crazyhorse
+import json
 from crazyhorse.utils.tools import import_class
 from crazyhorse.utils.tools import import_module
 from crazyhorse.web.controller import CrazyHorseController
@@ -60,6 +61,32 @@ class ApplicationSection(ConfigurationSection):
                 module = import_module(module_path)
 
         self.process_orphaned_routes()
+        self.generate_route_json()
+
+    def generate_route_json(self):
+        router = routing.application_router
+        output = {}
+        
+        for key in router.routes_available:
+            route   = router.routes_available[key]
+            meta    = {"name":key}
+            actions = {}
+            
+            for method in route.actions:
+                target = route.actions[method]
+                actions[method] = "::".join(target)
+            
+            meta["constraints"] = None;
+            
+            if route.constraints != None:
+                meta["constraints"] = {}
+                for constraint in route.constraints:
+                    meta["constraints"][constraint] = route.constraints[constraint]
+
+            output[route.path] = {"actions":actions, "meta":meta}
+        
+        with open("routes.json", "wb") as target:
+            target.write(json.dumps(output, sort_keys=True, indent=4))
 
 
     def process_orphaned_routes(self):

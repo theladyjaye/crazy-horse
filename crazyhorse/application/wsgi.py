@@ -23,7 +23,6 @@ class Application(object):
 
 
     def __call__(self, environ, start_response):
-            request_handlers = {}
             route            = None
             context          = None
             path             = environ["PATH_INFO"]

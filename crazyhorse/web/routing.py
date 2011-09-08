@@ -50,10 +50,11 @@ class Route(object):
     params_test = re.compile(r"\{([a-zA-Z0-9]+)\}")
 
     def __init__(self, path=None, constraints=None):
-        self.actions    = {}
-        self.pattern    = None
-        self.params     = None
-        self.path       = path
+        self.actions     = {}
+        self.pattern     = None
+        self.params      = None
+        self.path        = path
+        self.constraints = constraints
 
         if path is not None:
             pattern         = None

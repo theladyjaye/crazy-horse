@@ -22,4 +22,9 @@ class Jinja2View(CrazyHorseResult):
         # View Results should be responsible for setting the content type, not the controllers
 
         #response.headers.add("content-type", "text/html", charset="utf-8")
+        try:
+             template.render(self.model)
+        except Exception as e:
+            print(e.message)
+
         return template.render(self.model)#+ "<pre>{0}</pre>".format(str(self.context.environ))

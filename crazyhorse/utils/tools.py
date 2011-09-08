@@ -30,8 +30,8 @@ def import_module(pkg):
 
     try:
         module  = importlib.import_module(pkg)
-    except ImportError:
-        crazyhorse.get_logger().warning("Unable to import module {0}".format(pkg))
+    except ImportError as e:
+        crazyhorse.get_logger().warning("Unable to import module {0}: {1}".format(pkg, e.message))
         return None
 
     return module
